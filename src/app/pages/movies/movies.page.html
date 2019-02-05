@@ -13,7 +13,7 @@
  
   <ion-item>
     <ion-label>Select Searchtype</ion-label>
-    <ion-select [(ngModel)]="type" (ionChange)="searchChanged($event)">
+    <ion-select [(ngModel)]="type" interface="popover" (ionChange)="searchChanged($event)">
       <ion-select-option value="">All</ion-select-option>
       <ion-select-option value="movie">Movie</ion-select-option>
       <ion-select-option value="series">Series</ion-select-option>

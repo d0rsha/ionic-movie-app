@@ -20,7 +20,7 @@ export class MovieDetailsPage implements OnInit {
 
   ngOnInit() {
     // Get the ID that was passed with the URL
-    let id = this.activatedRoute.snapshot.paramMap.get('id');
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
 
     // Get the information from the API
     this.movieService.getDetails(id).subscribe(result => {
