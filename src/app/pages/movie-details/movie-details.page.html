@@ -4,6 +4,14 @@
           <ion-back-button color="primary" defaultHref="/"></ion-back-button>
         </ion-buttons>
     <ion-title>{{ information?.Genre }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
+        <ion-icon name="star" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
+        <ion-icon name="star-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -41,6 +49,9 @@
         <ion-icon name="open" slot="start"></ion-icon>
         Open Website
       </ion-button>
+
+      <ion-button expand="full" (click)="shareFilm()">Share by Email</ion-button>
+
     </ion-card-content>
   </ion-card>
   
